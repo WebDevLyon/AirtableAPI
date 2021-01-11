@@ -1,0 +1,26 @@
+{
+  "name": "airtabletohtml",
+  "version": "1.0.0",
+  "description": "Récupération des données d'une table Airtable pour conversion en HTML/CSS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebDevLyon/AirtableToHtml.git"
+  },
+  "keywords": [
+    "Airtable"
+  ],
+  "author": "Nicolas Lachise @Web Dev Lyon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebDevLyon/AirtableToHtml/issues"
+  },
+  "homepage": "https://github.com/WebDevLyon/AirtableToHtml#readme",
+  "dependencies": {
+    "airtable": "^0.10.1",
+    "dotenv": "^8.2.0"
+  }
+}
