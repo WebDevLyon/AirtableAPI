@@ -21,6 +21,7 @@
   "homepage": "https://github.com/WebDevLyon/AirtableToHtml#readme",
   "dependencies": {
     "airtable": "^0.10.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
   }
 }
