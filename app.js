@@ -37,14 +37,14 @@ const base = new Airtable({ apiKey: apiKey }).base(baseId);
 
 app.get("/allrecord", (req, res, next) => {
   let list = [];
-  base(req.body.base)
+  base(req.query.base)
     .select({
       view: "Main",
     })
     .eachPage(
       function page(records, fetchNextPage) {
         records.forEach(function (record) {
-          list.push({'Name':record.get("Nom"), 'id':record.id});
+          list.push({ Name: record.get("Nom"), id: record.id });
         });
         fetchNextPage();
         res.status(200).json({ Retrieved: list });
@@ -58,10 +58,11 @@ app.get("/allrecord", (req, res, next) => {
 });
 
 app.get("/onerecord", (req, res, next) => {
-  base(req.body.base).find(req.body.id, function (err, record) {
+  base(req.query.base).find(req.query.id, function (err, record) {
     if (err) {
       res.status(404).json(err);
     }
+    console.log(record.fields)
     res.status(200).json({ Retrieved: record.fields });
   });
 });
