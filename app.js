@@ -62,7 +62,6 @@ app.get("/onerecord", (req, res, next) => {
     if (err) {
       res.status(404).json(err);
     }
-    console.log(record.fields)
     res.status(200).json({ Retrieved: record.fields });
   });
 });
