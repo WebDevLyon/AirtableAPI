@@ -182,6 +182,29 @@ app.post("/register", (req, res) => {
   return res.status(201).json({ message: `User ${id} created` });
 });
 
+//Modif tournois
+  // !Déterminer l'entrée pour la req : type, contenu...
+  // *Boucle pour incrémenter un tableau de modif
+app.put("/tournoi",(req,res)=>{
+  base('Tournois').update(
+    [
+  {
+    id: req.body.id,
+    fields: {Nom : 'test',
+    A_saisir: ['Fait']}
+  }
+    ], 
+    function(err, records) {
+      if (err) {
+        res.json(err);
+      return;
+      }
+      records.forEach(function(record) {
+       res.json({result:record.get('Nom')});
+      });
+    });
+})
+
 app.listen(process.env.PORT || 3000, () =>
   console.log("Server started on port " + process.env.PORT + "...")
 );
