@@ -1,6 +1,8 @@
-# AirtableToHtml
+# Airtable AIP
 
-J'ai inséré l'API de airtable sous une API Express permettant  de récupérer les données selon vos requetes.
+Une simple API Rest sous node et express reprenant l'API de airtable
+
+Ce repos est créé pour l'utilisation d'une web app et sera modifié lorsque la base de donnée sera fonctionnelle (techno en attente de validation)
 
 ## .env schema
 
@@ -22,3 +24,6 @@ or
 $ nodemon server (if you have)
 
 ```
+## Routes
+
+A venir
