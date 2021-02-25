@@ -50,6 +50,7 @@ exports.getOneTournoi = (req, res) => {
 }
 
 exports.modifTournoi = (req, res) => {
+	console.log(req.body)
 	base('Tournois').update(
 		[
 			{
